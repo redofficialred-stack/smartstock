@@ -1,0 +1,7 @@
+node_modules/
+smartstock.db
+smartstock.db-shm
+smartstock.db-wal
+.env
+.env.*
+!.env.example
