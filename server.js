@@ -1,5 +1,5 @@
 const express = require('express'), Database = require('better-sqlite3'), bcrypt = require('bcryptjs'), jwt = require('jsonwebtoken'), path = require('path');
-const app = express(), db = new Database(path.join(__dirname, 'smartstock.db'));
+const app = express(), db = new Database(process.env.DB_PATH || path.join(__dirname, 'smartstock.db'));
 const SECRET = process.env.JWT_SECRET || 'smartstock-dev-secret-change-me';
 db.pragma('foreign_keys = ON');
 db.exec(`
